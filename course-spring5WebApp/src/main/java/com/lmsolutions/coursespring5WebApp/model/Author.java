@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
+@Entity(name = "com.lmsolutions.coursespring5WebApp.controllers.Author")
 public class Author {
     private String firstName;
     private String lastName;

@@ -1,4 +1,4 @@
-package com.lmsolutions.coursespring5WebApp.controller;
+package com.lmsolutions.coursespring5WebApp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,12 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller()
 public class IndexCtrl {
-   @RequestMapping()
-    @GetMapping(path = "/",produces = "text/xml")
-    public String index(Model model){
+    private String test;
 
-      model.addAttribute("message","test");
-      model.addAttribute("content","partials/test");
-       return "index";
-   }
+    @RequestMapping()
+    @GetMapping(path = "/", produces = "text/xml")
+    public String index(Model model) {
+
+        model.addAttribute("message", "test");
+        model.addAttribute("content", "partials/test");
+        return "index";
+    }
+
+
 }
