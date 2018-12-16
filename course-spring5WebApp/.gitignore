@@ -25,3 +25,5 @@
 /.nb-gradle/
 .idea/
 docs
+/.idea
+/.idea/
