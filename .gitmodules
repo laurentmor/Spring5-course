@@ -1,0 +1,4 @@
+[submodule "parts/pet-clinic"]
+	path = parts/pet-clinic
+	url  = https://github.com/laurentmor/lms-petclinic.git
+
