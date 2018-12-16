@@ -1,3 +1,8 @@
 [submodule "ext/google-maps"]
     path = ext/google-maps
     url = git://git.naquadah.org/google-maps.git
+
+[submodule "ext/clinic"]
+    path = ext/clinic
+    url =  https://github.com/laurentmor/lms-petclinic.git
+
