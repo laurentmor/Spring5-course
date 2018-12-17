@@ -2,29 +2,27 @@ package com.lmsolutions.coursespring5WebApp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Objects;
 
-import static javax.persistence.GenerationType.AUTO;
-
+/**
+ * Created by jt on 5/17/17.
+ */
 @Entity
 public class Publisher {
 
     @Id
-    @GeneratedValue(strategy = AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
+    private String address;
 
-    private String adress;
-
-    public Publisher() {
-
+    public Long getId() {
+        return id;
     }
 
-    public Publisher(String name, String adress) {
-        this.adress = adress;
-        this.name = name;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -35,21 +33,27 @@ public class Publisher {
         this.name = name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Long getId() {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        return id;
+        Publisher publisher = (Publisher) o;
+
+        return id != null ? id.equals(publisher.id) : publisher.id == null;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
@@ -57,23 +61,7 @@ public class Publisher {
         return "Publisher{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", adress='" + adress + '\'' +
+                ", address='" + address + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Publisher publisher = (Publisher) o;
-        return Objects.equals(id, publisher.id) &&
-                Objects.equals(name, publisher.name) &&
-                Objects.equals(adress, publisher.adress);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(id, name, adress);
     }
 }
