@@ -1,5 +1,6 @@
 package com.lmsolutions.coursespring5WebApp.model;
 
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
