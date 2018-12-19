@@ -20,8 +20,10 @@ public class AuthorController {
     @RequestMapping("/authors")
     public String getAuthors(Model model) {
 
+        model.addAttribute("title","A list of authors");
+        model.addAttribute("content","partials/authors");
         model.addAttribute("authors", authorRepository.findAll());
 
-        return "authors";
+        return "master";
     }
 }

@@ -19,9 +19,12 @@ public class BookController {
 
     @RequestMapping("/books")
     public String getBooks(Model model) {
+        model.addAttribute("title","A list of books");
+        model.addAttribute("content","partials/books");
 
         model.addAttribute("books", bookRepository.findAll());
 
-        return "books";
+
+        return "master";
     }
 }
