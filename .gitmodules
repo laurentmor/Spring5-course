@@ -1,3 +1,12 @@
 [submodule "parts/clinic"]
 	path = parts/clinic
 	url = https://github.com/laurentmor/lms-petclinic.git
+[submodule "parts/di-demo"]
+	path = parts/di-demo
+	url = https://github.com/laurentmor/lms-di-demo.git
+[submodule "parts/di-demo-assignment"]
+	path = parts/di-demo-assignment
+	url = https://github.com/laurentmor/lms-di-demo-assignment.git
+[submodule "parts/lms-chuck-norris-jokes"]
+	path = parts/lms-chuck-norris-jokes
+	url = https://github.com/laurentmor/lms-chuck-norris-jokes.git
